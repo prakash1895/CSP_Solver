@@ -1,0 +1,30 @@
+##### - variables
+A 17
+B 8
+C 11
+D 14
+E 5
+F 2
+G 10
+H 15
+##### - values
+p
+q
+r
+s
+x
+##### - deadline constraint
+19
+##### - unary inclusive
+A p q
+D x s
+##### - unary exclusive
+G r s x
+##### - binary equals
+A F
+##### - binary not equals
+E F
+C D
+##### - binary not simultaneous, this test should pass!
+D H x r
+C G s r

@@ -1,0 +1,14 @@
+##### - variables
+A 14
+B 9
+C 7
+##### - values
+p
+q
+##### - deadline constraint
+15
+##### - unary inclusive
+##### - unary exclusive
+##### - binary equals
+##### - binary not equals
+##### - binary not simultaneous, this test should fail!

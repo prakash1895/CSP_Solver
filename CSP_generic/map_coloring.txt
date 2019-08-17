@@ -1,0 +1,28 @@
+##### - variables
+WA 1
+NT 1
+Q 1
+NSW 1
+V 1
+SA 1
+T 1
+##### - values
+r
+g
+b
+##### - deadline constraint
+3
+##### - unary inclusive
+##### - unary exclusive
+##### - binary equals
+##### - binary not equals
+SA WA
+SA NT
+SA Q
+SA NSW
+SA V
+WA NT
+NT Q
+Q NSW
+NSW V
+##### - binary not simultaneous

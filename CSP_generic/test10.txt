@@ -1,0 +1,14 @@
+##### - variables	easy test for optimal solution
+A 10
+B 6
+C 5
+##### - values
+x
+y
+##### - deadline constraint
+11
+##### - unary inclusive
+##### - unary exclusive
+##### - binary equals
+##### - binary not equals
+##### - binary not simultaneous
