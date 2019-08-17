@@ -17,6 +17,50 @@
 Sample Output:
 
 <pre>
+Assignment:  {}
+Variable Attempt:  SA
+permissible_values:  ['b', 'g', 'r']
+Value Attempt:  b
+
+Assignment:  {'SA': 'b'}
+Variable Attempt:  Q
+permissible_values:  ['b', 'g', 'r']
+Value Attempt:  b
+Value Attempt:  g
+
+Assignment:  {'SA': 'b', 'Q': 'g'}
+Variable Attempt:  NT
+permissible_values:  ['b', 'g', 'r']
+Value Attempt:  b
+Value Attempt:  g
+Value Attempt:  r
+
+Assignment:  {'SA': 'b', 'Q': 'g', 'NT': 'r'}
+Variable Attempt:  NSW
+permissible_values:  ['b', 'g', 'r']
+Value Attempt:  b
+Value Attempt:  g
+Value Attempt:  r
+
+Assignment:  {'SA': 'b', 'Q': 'g', 'NT': 'r', 'NSW': 'r'}
+Variable Attempt:  WA
+permissible_values:  ['b', 'r', 'g']
+Value Attempt:  b
+Value Attempt:  r
+Value Attempt:  g
+
+Assignment:  {'SA': 'b', 'Q': 'g', 'NT': 'r', 'NSW': 'r', 'WA': 'g'}
+Variable Attempt:  V
+permissible_values:  ['b', 'r', 'g']
+Value Attempt:  b
+Value Attempt:  r
+Value Attempt:  g
+
+Assignment:  {'SA': 'b', 'Q': 'g', 'NT': 'r', 'NSW': 'r', 'WA': 'g', 'V': 'g'}
+Variable Attempt:  T
+permissible_values:  ['b', 'g', 'r']
+Value Attempt:  b
+
 CSP Assignment Success!
 
  Task	Processor

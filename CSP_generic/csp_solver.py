@@ -34,45 +34,45 @@ class CSP_Solver:
 
 		constraints = copy.deepcopy(self.constraint_matrices)
 		assignments = {}
-		unassigned = {var: v.permissible_values for var, v in self.var_dict.iteritems()}
+		unassigned = {var: v.permissible_values for var, v in self.var_dict.items()}
 		unassigned = self.AC3_consistency(unassigned, constraints)
 		result = self.backtrack(assignments, unassigned, constraints)
 		self.print_result(result)
 
 	def print_result(self, result):
-		print ""
-		print "------------------------------------------"
+		print ("")
+		print ("------------------------------------------")
 		
 		if result == False:
-			print "CSP Assignment Failure!"
-			print ""
+			print ("CSP Assignment Failure!")
+			print ("")
 		else:
-			print "CSP Assignment Success!\n"
-			print "Task\tProcessor"
-			for k,v in sorted(result.iteritems()):
-				print "  " + str(k) + "\t   " + str(v)
-			print ""
+			print ("CSP Assignment Success!\n")
+			print ("Task\tProcessor")
+			for k,v in sorted(result.items()):
+				print ("  " + str(k) + "\t   " + str(v))
+			print ("")
 
 			max_time = 0.00
-			print "Processor\tTotal Run Time"
-			for k,v in sorted(self.value_dict.iteritems()):
-				print "   " + str(k) + "\t\t     " + str(v.time_taken)
+			print ("Processor\tTotal Run Time")
+			for k,v in sorted(self.value_dict.items()):
+				print ("   " + str(k) + "\t\t     " + str(v.time_taken))
 				if v.time_taken >= max_time:
 					max_time = v.time_taken
-			print ""
-			print "Total Length of All Tasks: ", max_time
-			print ""
+			print ("")
+			print ("Total Length of All Tasks: ", max_time)
+			print ("")
 
 			if self.optional == True:
 				total_cost = 0.00
-				print "Processor\tCost"
-				for k,v in sorted(self.value_dict.iteritems()):
+				print ("Processor\tCost")
+				for k,v in sorted(self.value_dict.items()):
 					p_cost = v.time_taken*v.cost
 					total_cost += p_cost
-					print "   " + str(k) + "\t\t" + str(p_cost)
-				print ""
-				print "Total Cost of All Tasks: ", total_cost
-				print ""
+					print ("   " + str(k) + "\t\t" + str(p_cost))
+				print ("")
+				print ("Total Cost of All Tasks: ", total_cost)
+				print ("")
 
 	def read_costfile(self, costfile):
 		lines = [line.rstrip() for line in open(costfile)]
@@ -191,14 +191,14 @@ class CSP_Solver:
 		return m, bin_mat
 
 	def print_constraints(self):
-		print ""
-		print "Binary Constraint Matrices"
-		print ""
+		print ("")
+		print ("Binary Constraint Matrices")
+		print ("")
 		for head_var, tail_var, matrix in self.constraint_matrices:
-			print head_var+tail_var+" Matrix"
-			print matrix
-			print ""
-		print "------------------------------------------"
+			print (head_var+tail_var+" Matrix")
+			print (matrix)
+			print ("")
+		print ("------------------------------------------")
 
 	def remove_inconsistent_values(self, arc, unassigned, matrix):
 		Xi = arc[0]
@@ -337,13 +337,13 @@ class CSP_Solver:
 		var = self.select_unassigned_variable(unassigned)
 		values = self.order_domain_values(var, unassigned, constraints)
 
-		print ""
-		print "Assignment: ", assignments
-		print "Variable Attempt: ", var
-		print "permissible_values: ", values
+		print ("")
+		print ("Assignment: ", assignments)
+		print ("Variable Attempt: ", var)
+		print ("permissible_values: ", values)
 		constraints_old = copy.deepcopy(constraints)
 		for value in values:
-			print "Value Attempt: ", value
+			print ("Value Attempt: ", value)
 			if (self.value_dict[value].time_taken + self.var_dict[var].task_length) <= self.deadline:
 				assignments = self.make_assignment(var, value, assignments, unassigned)
 				constraints = self.propagate_constraints(assignments, constraints)
