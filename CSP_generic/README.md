@@ -1,5 +1,10 @@
+# CSP Generic Solver
+## WPI CS534 AI Project I
 
-Instructions to run the code:
+[Link to Project I instructions](http://web.cs.wpi.edu/~cs534/s19/Project/) 
+
+
+### Instructions to run the code:
 
 1) Open a new command terminal
 2) Navigate to the project directory
@@ -11,22 +16,21 @@ Instructions to run the code:
 	python csp_solver.py test9.txt test9_cost.txt
 
 Sample Output:
-__________________________
 CSP Assignment Success!
 
-Task	Processor
-  NSW	   g
-  NT	   g
-  Q	   b
-  SA	   r
-  T	   r
-  V	   b
-  WA	   b
+ Task	Processor
+ * NSW	   g
+ * NT	   g
+ * Q	   b
+ * SA	   r
+ * T	   r
+ * V	   b
+ * WA	   b
 
 Processor	Total Run Time
-   b		     3.0
-   g		     2.0
-   r		     2.0
+  * b		     3.0
+  * g		     2.0
+  * r		     2.0
 
 Total Length of All Tasks:  3.0
 
