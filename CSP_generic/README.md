@@ -19,19 +19,23 @@ Sample Output:
 
 CSP Assignment Success!
 
+<pre>
  Task	Processor
- * NSW	   g
- * NT	   g
- * Q	   b
- * SA	   r
- * T	   r
- * V	   b
- * WA	   b
+ * NSW	g
+ * NT	g
+ * Q	b
+ * SA	r
+ * T	r
+ * V	b
+ * WA	b
+</pre>
 
+<pre>
 Processor	Total Run Time
-  * b		     3.0
-  * g		     2.0
-  * r		     2.0
+  * b		3.0
+  * g		2.0
+  * r		2.0
+</pre>
 
 Total Length of All Tasks: 3.0
 
