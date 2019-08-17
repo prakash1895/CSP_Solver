@@ -21,10 +21,10 @@ class CSP_Solver:
             self.var_dict[queen_id] = CSP_variable(queen_id, nqueens)
 
     def solve(self):
-        print ""
+        print ("")
         start = time.time()
         assignments = {}
-        unassigned = {queen_id: csp_var.permissible_values for queen_id, csp_var in self.var_dict.iteritems()}
+        unassigned = {queen_id: csp_var.permissible_values for queen_id, csp_var in self.var_dict.items()}
         unassigned = self.AC3_consistency(assignments, unassigned)
         result = self.backtrack(assignments, unassigned)
         time_taken = time.time() - start
@@ -32,15 +32,15 @@ class CSP_Solver:
         return time_taken
 
     def print_assignment(self, assignments):
-        print "Current Assignment"
+        print ("Current Assignment")
         if bool(assignments) == False:
-            print "{Empty State}"
-            print ""
+            print ("{Empty State}")
+            print ("")
             return
 
-        for var, pv in assignments.iteritems():
-            print var, pv[0]
-        print ""
+        for var, pv in assignments.items():
+            print (var, pv[0])
+        print ("")
 
     def break_symmetry(self, CM):
         CM_list = []
@@ -55,13 +55,13 @@ class CSP_Solver:
 
     def print_result(self, result, time_taken):
         if result == False:
-            print "\n------------------------------------------\n"
-            print "CSP Assignment Failure!\n"
-            print "Time Taken (sec): ", time_taken
+            print ("\n------------------------------------------\n")
+            print ("CSP Assignment Failure!\n")
+            print ("Time Taken (sec): ", time_taken)
         else:
             self.print_assignment(result)
-            print "------------------------------------------\n"
-            print "CSP Assignment Success!\n"
+            print ("------------------------------------------\n")
+            print ("CSP Assignment Success!\n")
             Q_matrix = np.zeros((self.nqueens, self.nqueens))
             for var in result.keys():
                 val = result[var][0]
@@ -69,9 +69,9 @@ class CSP_Solver:
                 j = val[1]
                 Q_matrix[i][j] = 1
 
-            print "Time Taken (sec): ", time_taken
+            print ("Time Taken (sec): ", time_taken)
             title=str(self.nqueens)+"-Queens"
-            print "\n------------------------------------------\n"
+            print ("\n------------------------------------------\n")
 
             CM_list = self.break_symmetry(Q_matrix)
             plot_nqueens(CM_list[0], self.nqueens, title=title+" Original")
@@ -157,7 +157,7 @@ class CSP_Solver:
         return lcv_list
 
     def is_empty(self, v):
-        for values in v.itervalues():
+        for values in v.values():
             if len(values) == 0:
                 return True
         return False
@@ -176,7 +176,7 @@ class CSP_Solver:
             updated_assignment = self.AC3_consistency(assignments, unassigned)
             if self.is_empty(updated_assignment):
                 continue
-            revised = {var:val for var,val in updated_assignment.iteritems() if var not in assignments}
+            revised = {var:val for var,val in updated_assignment.items() if var not in assignments}
             result = self.backtrack(assignments.copy(), revised)
             if result != False:
                 return result
@@ -185,8 +185,8 @@ class CSP_Solver:
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         nqueens = 8
-        print "\nNumber of Queens not specified!"
-        print "Taking N=8 by default. \n"
+        print ("\nNumber of Queens not specified!")
+        print ("Taking N=8 by default. \n")
     else:
         nqueens = int(sys.argv[1])
     csp_obj = CSP_Solver(nqueens)
