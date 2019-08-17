@@ -16,6 +16,7 @@
 	python csp_solver.py test9.txt test9_cost.txt
 
 Sample Output:
+
 CSP Assignment Success!
 
  Task	Processor
@@ -32,5 +33,5 @@ Processor	Total Run Time
   * g		     2.0
   * r		     2.0
 
-Total Length of All Tasks:  3.0
+Total Length of All Tasks: 3.0
 
