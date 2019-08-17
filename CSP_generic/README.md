@@ -1,8 +1,7 @@
 # CSP Generic Solver
-## WPI CS534 AI Project I
+## WPI CS534 AI Project Part I
 
-[Link to Project I instructions](http://web.cs.wpi.edu/~cs534/s19/Project/) 
-
+[Link to Project Instructions](http://web.cs.wpi.edu/~cs534/s19/Project/) 
 
 ### Instructions to run the code:
 
