@@ -1,17 +1,22 @@
+# CSP N-Queens Solver
+## WPI CS534 AI Project Part II
 
-Instructions to run the code:
+[Link to Project Instructions](http://web.cs.wpi.edu/~cs534/s19/Project/) 
+
+### Instructions to run the code:
 
 1) Open a new command terminal
 2) Navigate to the project directory
 3) Run the following command:
-	python csp_solver_nqueens.py <n_queens> 
-	For example, python csp_solver_nqueens.py 15
+	* python csp_solver_nqueens.py <n_queens> 
+	* For example, python csp_solver_nqueens.py 15
 
 4) By default, n_queens=8,
-	python csp_solver_nqueens.py
+	* python csp_solver_nqueens.py
 
 Program Output:
 
+<pre>
 Number of Queens not specified!
 Taking N=8 by default. 
 
@@ -81,4 +86,4 @@ CSP Assignment Success!
 Time Taken (sec):  0.0110189914703
 
 ------------------------------------------
-
+</pre>
